@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>gulp-scss-starter</title>
+  <title>iProService</title>
   <meta name="theme-color" content="#fff">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -24,239 +24,239 @@
   <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom -->
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
   @@include("../blocks/modules/header/header.html")
 
-  <div class="breadcrumbs">
-    <div class="container">
-      <div class="breadcrumbs__inner flex">
-        <a href="/" class="breadcrumbs__item">Главная</a>
-        <a href="product-list.html" class="breadcrumbs__item">Каталог товаров</a>
-        <a href="#" class="breadcrumbs__item">Чашка брендированная</a>
-      </div>
-    </div>
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs container flex">
+    <a href="/" class="breadcrumbs__item">Главная</a>
+    <a href="/shop.html" class="breadcrumbs__item">Магазин</a>
+    <a href="/category.html" class="breadcrumbs__item">iPhone</a>
+    <a href="#" class="breadcrumbs__item">iPhone XR</a>
   </div>
 
-  <main class='main pdp'>
-    <section class='pdp'>
-      <div class="container">
-        <div class="pdp__row row-flex">
-          <!-- Gallery -->
-          <div class="pdp__gallery-wrap pdp__col col">
-            <div class="pdp__gallery-for">
-              <div class='pdp__gallery-for-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-for-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-for-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-for-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-for-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
+  <!-- Main -->
+  <main class="main page pdp">
+    <div class="container">
+      <div class="pdp__row row-flex">
+        <!-- Gallery -->
+        <div class="pdp-gallery pdp__gallery col">
+          <div class="pdp-gallery__for">
+            <div class='pdp-gallery__for-slide'>
+              <img src="img/iphone.png" alt="">
             </div>
-            <div class="pdp__gallery-nav">
-              <div class='pdp__gallery-nav-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-nav-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-nav-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-nav-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
-              <div class='pdp__gallery-nav-item'>
-                <img src="img/temp-pdp-product.png" alt="">
-              </div>
+            <div class='pdp-gallery__for-slide'>
+              <img src="img/iphone.png" alt="">
+            </div>
+            <div class='pdp-gallery__for-slide'>
+              <img src="img/iphone.png" alt="">
+            </div>
+            <div class='pdp-gallery__for-slide'>
+              <img src="img/iphone.png" alt="">
+            </div>
+            <div class='pdp-gallery__for-slide'>
+              <img src="img/iphone.png" alt="">
+            </div>
+            <div class='pdp-gallery__for-slide'>
+              <img src="img/iphone.png" alt="">
             </div>
           </div>
-
-          <!-- Info -->
-          <div class="pdp__info pdp__col col">
-            <h1 class="pdp__title section-title">Чашка брендированная</h1>
-            <div class="pdp__code">Код: GRW04.12.002/LCH</div>
-            <div class="pdp__descr">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-            </div>
-
-            <!-- Stock -->
-            <div class="pdp__stock flex align-center">
-              <!-- "stock-in" || "stock-out" -->
-              <svg class="icon stock-in">
-                <!-- "Done" || "Cancel" -->
-                <use xlink:href="#done" />
-              </svg>
-              В наличии
-            </div>
-
-            <!-- Options -->
-            <div class="pdp__options">
-              <div class="pdp__option">
-                <div class="pdp__option-caption">Цвет</div>
-                <div class="select" style="width:200px;">
-                  <select class="select__original">
-                    <option value="0">Choose</option>
-                    <option value="1">Черный Черный Черный Черный Черный Черный</option>
-                    <option value="2">Черный</option>
-                    <option value="3">Черный</option>
-                    <option value="4">Черный</option>
-                    <option value="5">Черный</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="pdp__option">
-                <div class="pdp__option-caption">Кол-во</div>
-                <div class="quantity flex">
-                  <button class="btn quantity__btn quantity__minus">-</button>
-                  <input type="text" class="input quantity__input" disabled value='1'>
-                  <button class="btn quantity__btn quantity__plus">+</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Price -->
-            <div class="pdp__price">100 грн.</div>
-
-            <!-- Buy -->
-            <button class="btn btn-blue pdp__buy">
-              <svg class="icon icon-btn">
-                <use xlink:href="#shopping-cart"></use>
-              </svg>
-              В корзину
-            </button>
-
-            <!-- Advantages -->
-            <div class="pdp__advantages">
-              <div class="pdp__advantages-item">
+          <div class="pdp-gallery__nav-wrap">
+            <!-- Slider Nav -->
+            <div class="pdp-gallery__control">
+              <button class='btn pdp-gallery__control-btn pdp-gallery__control-prev'>
                 <svg class="icon">
-                  <use xlink:href="#shield" />
+                  <use xlink:href="#previous" />
                 </svg>
-                Безопасная оплата
-              </div>
-              <div class="pdp__advantages-item">
+              </button>
+              <button class='btn pdp-gallery__control-btn pdp-gallery__control-next'>
                 <svg class="icon">
-                  <use xlink:href="#truck" />
+                  <use xlink:href="#previous" />
                 </svg>
-                Быстрая доставка
-              </div>
-              <div class="pdp__advantages-item">
-                <svg class="icon">
-                  <use xlink:href="#undo" />
-                </svg>
-                Гарантия возврата или обмена
-              </div>
+              </button>
             </div>
 
+            <div class="pdp-gallery__nav">
+              <div class='pdp-gallery__nav-slide'>
+                <img src="img/iphone.png" alt="">
+              </div>
+              <div class='pdp-gallery__nav-slide'>
+                <img src="img/iphone.png" alt="">
+              </div>
+              <div class='pdp-gallery__nav-slide'>
+                <img src="img/iphone.png" alt="">
+              </div>
+              <div class='pdp-gallery__nav-slide'>
+                <img src="img/iphone.png" alt="">
+              </div>
+              <div class='pdp-gallery__nav-slide'>
+                <img src="img/iphone.png" alt="">
+              </div>
+              <div class='pdp-gallery__nav-slide'>
+                <img src="img/iphone.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="pdp__tabs">
-          <div class="pdp__tabs-head flex align-center">
-            <div class="pdp__tabs-toggler active">Описание</div>
-            <div class="pdp__tabs-toggler">Характеристики</div>
+        <!-- Info -->
+        <div class="pdp-info pdp__info col">
+          <div class="pdp__head row-flex align-center justify-between">
+            <h1 class='section__title page__title pdp__title col'>iPhone XR</h1>
+
+            <div class="pdp__meta col">
+              <div class="pdp__meta-stock">
+                В наличии
+              </div>
+              <div class="pdp__meta-code">Код товара: 240016</div>
+            </div>
           </div>
-          <div class="pdp__tabs-body">
-            <div class="pdp__tab active">
-              <p>
-                <strong>Печать на чашке керамической</strong> с использованием <a href='#'>технологии Гравертон (Grawerton)</a>. На чашку можно нанести любое изображение, надпись или логотип.
-              </p>
-              <p>
-                Печать на чашках - это эксклюзивный и оригинальный подарок, а также популярный и универсальный вид рекламно-сувенирной продукции.
-              </p>
-              <p>
-                Вы можете предоставить нам любое изображение, фотографию, надпись или логотип и наши дизайнеры обработают его и создадут эксклюзивный дизайн на ваше усмотрение. Отправить эскиз изображения можно по электронному адресу <a href='#'>k@mug.com.ua.</a>
-              </p>
-              <p>
-                <strong>Обработка макета оплачивается отдельно. Стоимость зависит от сложности макета.</strong> <br>
-                Цена указана уже с печатью
-              </p>
+
+          <div class="pdp__options">
+            <div class="pdp__options-block">
+              <div class="pdp__options-title">Выберите цвет</div>
+
+              <div class="pdp__options-list row-flex text-center">
+                <div class="pdp__option pdp__option_color col active">
+                  <span class="pdp__option-color" style='background-color: #262627;'></span> Чёрный
+                </div>
+                <div class="pdp__option pdp__option_color col">
+                  <span class="pdp__option-color" style='background-color: #bd000a;'></span> Красный
+                </div>
+                <div class="pdp__option pdp__option_color col disabled">
+                  <span class="pdp__option-color" style='background-color: #ccc;'></span> Белый
+                </div>
+              </div>
             </div>
-            <div class="pdp__tab">
-              <table border='1'>
-                <tbody>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reprehenderit!</td>
-                    <td>Lorem ipsum dolor sit.</td>
-                  </tr>
 
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reprehenderit!</td>
-                    <td>Lorem ipsum dolor sit.</td>
-                  </tr>
+            <div class="pdp__options-block">
+              <div class="pdp__options-title">Выберите объём</div>
 
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reprehenderit!</td>
-                    <td>Lorem ipsum dolor sit.</td>
-                  </tr>
-
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reprehenderit!</td>
-                    <td>Lorem ipsum dolor sit.</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="pdp__options-list text-center row-flex">
+                <div class="pdp__option active col pdp__option_memory">
+                  <div class="pdp__option-memory">64 GB</div>
+                  <div class="pdp__option-price">15 999 грн.</div>
+                </div>
+                <div class="pdp__option col pdp__option_memory">
+                  <div class="pdp__option-memory">64 GB</div>
+                  <div class="pdp__option-price">15 999 грн.</div>
+                </div>
+                <div class="pdp__option col pdp__option_memory disabled">
+                  <div class="pdp__option-memory">64 GB</div>
+                  <div class="pdp__option-price">15 999 грн.</div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="pdp__notes">
+            <div class="pdp__note flex align-center">
+              <svg class="icon">
+                <use xlink:href="#warranty" />
+              </svg>
+              Гарантия 24 месяца
+            </div>
+            <div class="pdp__note flex align-center">
+              <svg class="icon">
+                <use xlink:href="#box" />
+              </svg>
+              Бесплатная доставка по Украине
+            </div>
+          </div>
+
+          <div class="pdp__buttons flex align-center">
+            <button class="btn btn_purple pdp__btn pdp__btn-buy">Добавить в корзину</button>
+            <button class="btn btn_trans pdp__btn pdp__btn-click">Купить в 1 клик</button>
           </div>
         </div>
       </div>
-    </section>
 
-    <div class="similar">
-      <div class="container">
-        <!-- Title -->
-        <h2 class="blog__title section-title section-title_mini">Подобные товары</h2>
-
-        <!-- List -->
-        <div class="pl__list similar__list">
-          <!-- Item -->
-          <a href='product.html' class="pl-card pl__list-item">
-            <div class="pl-card__image">
-              <img src="img/temp-product.png" alt="">
+      <div class="pdp__about">
+        <div class="pdp__about-nav row-flex justify-center">
+          <div class="pdp__about-tab active col" data-tab-target='1'>Описание</div>
+          <div class="pdp__about-tab col" data-tab-target='2'>Характеристики</div>
+        </div>
+        <div class="pdp__about-body">
+          <div class="pdp__about-descr pdp__about-tab-inner" data-tab='1' style='display: block;'>
+            <div class="pdp__about-banner text-center">
+              <img src="img/pdp-banner.png" alt="">
             </div>
-            <div class="pl-card__title">Блокнот брендированный</div>
-            <div class="pl-card__price">100 грн / шт.</div>
-          </a>
-
-          <!-- Item -->
-          <a href='product.html' class="pl-card pl__list-item">
-            <div class="pl-card__image">
-              <img src="img/temp-product.png" alt="">
+            <div class="pdp__about-inner">
+              <p>
+                Ceramic Shield. Точно прочно. Стекло iPhone всегда отличалось высочайшей прочностью. И чтобы сделать iPhone 12 Pro Max ещё надёжнее, нам пришлось создать совершенно новый материал. Керамические нанокристаллы. Передняя панель Ceramic Shield. При её изготовлении в матрицу стекла добавляются керамические нанокристаллы, которые прочнее многих известных металлов. Звучит просто, но на самом деле это очень сложная технология, потому что керамические кристаллы непрозрачны. Только точно подобрав тип кристалла и степень его кристаллизации, мы смогли разработать уникальную формулу материала, который обладает прочностью керамики и прозрачностью стекла. Благодаря этому Ceramic Shield прекрасно подходит для дисплея — потому что он гораздо надёжнее.
+              </p>
+              <p>
+                Риск повреждений при падении в 4 раза ниже: Мы добились такой прочности не только с помощью Ceramic Shield. Передняя панель устанавливается на одном уровне с корпусом, что создаёт дополнительную защиту. В итоге риск повредить iPhone при падении уменьшается в 4 раза. Таких значительных улучшений всего за один год у нас ещё не было.
+              </p>
             </div>
-            <div class="pl-card__title">Блокнот брендированный</div>
-            <div class="pl-card__price">100 грн / шт.</div>
-          </a>
+          </div>
 
-          <!-- Item -->
-          <a href='product.html' class="pl-card pl__list-item">
-            <div class="pl-card__image">
-              <img src="img/temp-product.png" alt="">
+          <div class='pdp__about-chars pdp-chars pdp__about-tab-inner' data-tab='2'>
+            <div class="pdp-chars__row row-flex justify-between flex-nowra">
+              <div class="pdp-chars__key col">Артикул</div>
+              <div class="pdp-chars__value col">MGD73</div>
             </div>
-            <div class="pl-card__title">Блокнот брендированный</div>
-            <div class="pl-card__price">100 грн / шт.</div>
-          </a>
 
-          <!-- Item -->
-          <a href='product.html' class="pl-card pl__list-item">
-            <div class="pl-card__image">
-              <img src="img/temp-product.png" alt="">
+            <div class="pdp-chars__row row-flex justify-between flex-nowrap">
+              <div class="pdp-chars__key col">Процессор</div>
+              <div class="pdp-chars__value col">
+                Процессор A14 Bionic <br>
+                Система Neural Engine нового поколения
+              </div>
             </div>
-            <div class="pl-card__title">Блокнот брендированный</div>
-            <div class="pl-card__price">100 грн / шт.</div>
-          </a>
+
+            <div class="pdp-chars__row row-flex justify-between flex-nowrap">
+              <div class="pdp-chars__key col">Вес</div>
+              <div class="pdp-chars__value col">226 г</div>
+            </div>
+
+            <div class="pdp-chars__row row-flex justify-between flex-nowrap">
+              <div class="pdp-chars__key col">Дисплей</div>
+              <div class="pdp-chars__value col">
+                Дисплей Super Retina XDR<br />
+                Дисплей OLED, на всю переднюю панель, диагональ 6,7 дюйма<br />
+                2778×1284 пикселя,<br />
+                458 пикселей на дюйм<br />
+                Поддержка HDR<br />
+                Технология True Tone<br />
+                Широкий цветовой охват (P3)<br />
+                Тактильный отклик при нажатии<br />
+                Контрастность 2 000 000:1 (стандартная)<br />
+                Яркость до 800 кд/м² (стандартная); до 1200 кд/м² при просмотре контента в формате HDR<br />
+                Олеофобное покрытие, устойчивое к появлению следов от пальцев<br />
+                Поддержка одновременного отображения нескольких языков и наборов символов
+              </div>
+            </div>
+
+            <div class="pdp-chars__row row-flex justify-between flex-nowrap">
+              <div class="pdp-chars__key col">Защита от брызг, воды и пыли</div>
+              <div class="pdp-chars__value col">
+                Рейтинг IP68 по стандарту IEC 60529 <br>
+                (допускается погружение в воду на глубину до 6 метров длительностью до 30 минут)
+              </div>
+            </div>
+
+            <div class="pdp-chars__row row-flex justify-between flex-nowrap">
+              <div class="pdp-chars__key col">Датчики</div>
+              <div class="pdp-chars__value col">
+                Face ID <br>
+                Сканер LiDAR <br>
+                Трёхосевой гироскоп <br>
+                Акселерометр <br>
+                Датчик приближения <br>
+                Датчик внешней освещённости
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

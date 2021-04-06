@@ -1,100 +1,159 @@
-<header class="header">
-  <div class="header-top">
-    <div class="container header-top__container flex justify-between">
-      <div class="header-top__tels">
-        <a class='header-top__tel' href="tel:+380443344209">+38 (044) 334-42-09</a>
-        <a class='header-top__tel' href="tel:+380674875880">+38 (067) 487-58-80</a>
-        <a class='header-top__tel' href="tel:+380990037399">+38 (099) 003-73-99</a>
-        <a class='header-top__tel' href="tel:+380977940555">+38 (097) 794-05-55</a>
-      </div>
+<!-- Header -->
+<header class="header bg-dark">
+  <div class="header__main">
+    <div class="container">
+      <div class="header__row row-flex flex-nowrap align-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="header__logo col">
+          <img src="img/logo-white.svg" alt="" />
+        </a>
 
-      <div class="header-top__langs flex align-center">
-        <div class="header-top__lang active">RU</div>
-        <div class="header-top__lang">UA</div>
-      </div>
-    </div>
-  </div>
-  <div class="header-main container flex justify-between">
-    <a href="" class="header__logo logo hidden-md">
-      <img src="img/logo.svg" alt="" />
-    </a>
+        <div class="header__main-nav flex align-center col">
+          <div class="header__toggler flex align-center">
+            <a href="/" class="header__main-link active">Сервис</a>
+            <button class="header__toggler-btn"></button>
+            <a href="shop.html" class="header__main-link">Магазин</a>
+          </div>
+          <a href="/about.html" class="header__main-link header__main-about">О нас</a>
+        </div>
 
-    <form action="" class="header__search search flex hidden-md">
-      <input type="search" id='search' name="search" class="search__input input" placeholder="Введите запрос для поиска">
-      <button class="btn btn-blue btn-icon search__btn">
-        <svg id="search" viewBox="0 0 24 24">
-          <title>search</title>
-          <path d="m21.71 20.29-5.4-5.39a7.92 7.92 0 0 0 1.69-4.9 8 8 0 1 0 -8 8 7.92 7.92 0 0 0 4.9-1.69l5.39 5.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zm-17.71-10.29a6 6 0 1 1 6 6 6 6 0 0 1 -6-6z"></path>
-        </svg>
-      </button>
-    </form>
-
-    <button class="btn btn-blue header__callback">
-      <svg class="icon icon-btn">
-        <use xlink:href="#old-typical-phone" />
-      </svg>
-      Заказать звонок
-    </button>
-
-    <div class="basket flex">
-      <button class="btn btn-blue btn-icon basket__btn">
-        <svg class="icon">
-          <use xlink:href="#shopping-cart" />
-        </svg>
-      </button>
-      <div class="basket__info flex justify-center">
-        <div class="basket__value">1 256 грн.</div>
-        <div class="basket__num">24 товара</div>
-      </div>
-    </div>
-  </div>
-  <div class="header-nav">
-    <div class="container header-nav__container flex align-center justify-between">
-      <a href="/" class="header-nav__logo logo">
-        <img src="img/logo-white.png" alt="">
-      </a>
-      <div class="burger"><span class="burger__inner"></span></div>
-      <div class="burger-overlay"></div>
-      <ul class="nav flex bg-dark">
-        <li class='nav__item'>
-          <a class="nav__link nav__link_icon active" href="">
-            <svg class="icon icon-white">
-              <use xlink:href="#home" />
+        <div class="header__contacts text-right col">
+          <div class="header__contacts-item header__contacts-phones flex-inline align-center">
+            <a href='tel:+380960992599' class="header__phone">+38 (096) 099-25-99</a>
+            <svg class="icon">
+              <use xlink:href="#previous" />
             </svg>
-          </a>
-        </li>
-        <li class='nav__item nav__item-dropdown'>
-          <a class="nav__link" href="#">Каталог товаров</a>
-          <ul class="nav__dropdown">
-            <li class="nav__dropdown-item">
-              <a class='nav__dropdown-link' href="#">Сувениры для бизнеса</a>
-            </li>
-            <li class="nav__dropdown-item">
-              <a class='nav__dropdown-link' href="#">Товары для типографий</a>
-            </li>
-            <li class="nav__dropdown-item">
-              <a class='nav__dropdown-link' href="#">Все товары</a>
-            </li>
-          </ul>
-        </li>
-        <li class='nav__item nav__item-dropdown'>
-          <a class="nav__link" href="#">Каталог услуг</a>
-          <ul class="nav__dropdown">
-            <li class="nav__dropdown-item">
-              <a class='nav__dropdown-link' href="#">Сувениры для бизнеса</a>
-            </li>
-            <li class="nav__dropdown-item">
-              <a class='nav__dropdown-link' href="#">Товары для типографий</a>
-            </li>
-            <li class="nav__dropdown-item">
-              <a class='nav__dropdown-link' href="#">Все товары</a>
-            </li>
-          </ul>
-        </li>
-        <li class='nav__item'><a class="nav__link" href="">Блог</a></li>
-        <li class='nav__item'><a class="nav__link" href="">Контакты</a></li>
-        <li class='nav__item'><a class="nav__link" href="">О нас</a></li>
-      </ul>
+
+            <div class="header__phones" style='display: none;'>
+              <a href="tel:+380960992599" class="header__phone">+38 (096) 099-25-99</a>
+              <a href="tel:+380960992599" class="header__phone">+38 (096) 099-25-99</a>
+              <a href="tel:+380960992599" class="header__phone">+38 (096) 099-25-99</a>
+            </div>
+          </div>
+
+          <div class="header__contacts-item flex-inline align-center">
+            <div class="header__address">г. Киев ул. Бастионная 2/1</div>
+            <svg class="icon">
+              <use xlink:href="#google-maps" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__sub">
+    <div class="container">
+      <div class="header__sub-row row-flex align-center justify-between flex-nowrap">
+        <a href='/services.html' class="header__sub-service flex align-center col">
+          <svg class="icon">
+            <use xlink:href="#customer-support" />
+          </svg>
+          Сервисные услуги
+        </a>
+
+        <nav class="nav header__sub-nav text-center col">
+          <a href='/category.html' class="nav__link">iPhone</a>
+          <a href='/category.html' class="nav__link">iPad</a>
+          <a href='/category.html' class="nav__link">iMac</a>
+          <a href='/category.html' class="nav__link">Macbook</a>
+          <a href='/category.html' class="nav__link">Watch</a>
+        </nav>
+
+        <div class="header__sub-control flex align-center justify-end col">
+          <form class="header__search flex align-center">
+            <input class='input header__search-input' type="text" placeholder="Search...">
+            <button type='submit' class='btn header__search-btn'>
+              <svg class="icon">
+                <use xlink:href="#search" />
+              </svg>
+            </button>
+          </form>
+
+          <div class="header__basket">
+            <div class="header__basket-preview active">
+              <div class="header__basket-count">2</div>
+              <svg class="icon">
+                <use xlink:href="#bag" />
+              </svg>
+            </div>
+
+            <div class="header__basket-body">
+              <div class="basket__products">
+                <!-- Product -->
+                <div class="basket-product header__basket-product row-flex flex-nowrap justify-between align-center">
+                  <!-- Left -->
+                  <div class="basket-product__left flex align-center col">
+                    <a href='/product.html' class="basket-product__image">
+                      <img src="img/temp-product.png" alt="">
+                    </a>
+                    <div class="basket-product__info">
+                      <a href="/product.html" class="basket-product__title header__basket-title">iPhone XR <span class="basket-product__count">x 1</span></a>
+
+
+                      <div class="basket-product__options header__basket-options">
+                        <div class="basket-product__option basket-product__option_color flex aling-center">
+                          <span style="background-color: #000;"></span> Чёрный
+                        </div>
+                        <div class="basket-product__option">64 GB</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right -->
+                  <div class="basket-product__right text-right col">
+                    <button class="btn basket-product__close">
+                      <svg class="icon">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                    <div class="basket-product__price header__basket-price">14 999 грн.</div>
+                  </div>
+                </div>
+
+                <!-- Product -->
+                <div class="basket-product header__basket-product row-flex flex-nowrap justify-between align-center">
+                  <!-- Left -->
+                  <div class="basket-product__left flex align-center col">
+                    <a href='/product.html' class="basket-product__image">
+                      <img src="img/temp-product.png" alt="">
+                    </a>
+                    <div class="basket-product__info">
+                      <a href="/product.html" class="basket-product__title header__basket-title">iPhone XR <span class="basket-product__count">x 1</span></a>
+
+                      <div class="basket-product__options header__basket-options">
+                        <div class="basket-product__option basket-product__option_color flex aling-center">
+                          <span style="background-color: #000;"></span> Чёрный
+                        </div>
+                        <div class="basket-product__option">64 GB</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right -->
+                  <div class="basket-product__right text-right col">
+                    <button class="btn basket-product__close">
+                      <svg class="icon">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                    <div class="basket-product__price header__basket-price">14 999 грн.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__basket-total text-right">
+                Итого: <span>29 998 грн.</span>
+              </div>
+
+              <button class="btn btn_purple header__basket-btn w-100">Оформить заказ</button>
+            </div>
+          </div>
+
+          <button class="btn burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </header>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iProService</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  @@include("../blocks/modules/header/header.html")
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs container flex">
+    <a href="/" class="breadcrumbs__item">Главная</a>
+    <a href="#" class="breadcrumbs__item">Оформление заказа</a>
+  </div>
+
+  <main class="main page checkout">
+    <div class="container">
+      <div class="checkout__row row-flex align-center">
+        <div class="checkout__left col">
+          <!-- Main -->
+          <h1 class='section__title page__title'>Оформление заказа на <span class='nowrap'>iPro-Service</span></h1>
+          <div class="page__caption">Для оформления заказа укажите данные ниже.</div>
+
+          <div class="checkout__info">
+            <div class="checkout__block">
+              <div class="checkout__block-title">Информация о клиенте</div>
+
+              <div class="checkout__group-wrap row-flex">
+                <div class="checkout__group input__group col">
+                  <input name='userName' id='userName' class='input input-trans w-100' type="text">
+                  <label class='input__label' for="userName">Ваше имя</label>
+                </div>
+
+                <div class="checkout__group input__group col">
+                  <input name='userSername' id='userSername' class='input input-trans w-100' type="text">
+                  <label class='input__label' for="userSername">Ваша фамилия</label>
+                </div>
+
+                <div class="checkout__group input__group col">
+                  <input name='userPhone' id='userPhone' class='input input-trans w-100' type="tel">
+                  <label class='input__label' for="userPhone">Номер телефона</label>
+                </div>
+
+                <div class="checkout__group input__group col">
+                  <input name='userEmail' id='userEmail' class='input input-trans w-100' type="email">
+                  <label class='input__label' for="userEmail">Email</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout__block">
+              <div class="checkout__block-title">Доставка</div>
+
+              <div class="checkout__group-wrap row-flex">
+                <div class="select checkout__group col">
+                  <select class="select__original">
+                    <option value="0">Новая Почта</option>
+                    <option value="2">opt1</option>
+                    <option value="3">opt8</option>
+                    <option value="4">opt7</option>
+                  </select>
+                </div>
+
+                <div class="select checkout__group col">
+                  <select class="select__original">
+                    <option value="0">Выберите область</option>
+                    <option value="2">opt1</option>
+                    <option value="3">opt8</option>
+                    <option value="4">opt7</option>
+                  </select>
+                </div>
+
+                <div class="select checkout__group col">
+                  <select class="select__original">
+                    <option value="0">Выберите город</option>
+                    <option value="2">opt1</option>
+                    <option value="3">opt8</option>
+                    <option value="4">opt7</option>
+                  </select>
+                </div>
+
+                <div class="select checkout__group col">
+                  <select class="select__original">
+                    <option value="0">Выберите отделение</option>
+                    <option value="2">opt1</option>
+                    <option value="3">opt8</option>
+                    <option value="4">opt7</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout__block">
+              <div class="checkout__block-title">Оплата</div>
+
+              <div class="checkout__group-wrap row-flex">
+                <div class="select checkout__group col">
+                  <select class="select__original">
+                    <option value="0">Наложенный платеж</option>
+                    <option value="2">opt1</option>
+                    <option value="3">opt8</option>
+                    <option value="4">opt7</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout__right col">
+          <div class="basket">
+            <div class="basket__products">
+              <!-- Product -->
+              <div class="basket-product row-flex flex-nowrap justify-between align-center">
+                <!-- Left -->
+                <div class="basket-product__left flex align-center col">
+                  <a href='/product.html' class="basket-product__image">
+                    <img src="img/temp-product.png" alt="">
+                  </a>
+                  <div class="basket-product__info">
+                    <a href='/product.html' class="basket-product__title">iPhone XR <span class="basket-product__count">x 1</span>
+                    </a>
+
+                    <div class="basket-product__options flex flex-wrap">
+                      <div class="basket-product__option basket-product__option_color flex aling-center">
+                        <span style='background-color: #000;'></span> Чёрный
+                      </div>
+                      <div class="basket-product__option">64 GB</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right -->
+                <div class="basket-product__right text-right col">
+                  <button class="btn basket-product__close">
+                    <svg class="icon">
+                      <use xlink:href="#close" />
+                    </svg>
+                  </button>
+                  <div class="basket-product__price">14 999 грн.</div>
+                </div>
+              </div>
+
+              <!-- Product -->
+              <div class="basket-product row-flex flex-nowrap justify-between align-center">
+                <!-- Left -->
+                <div class="basket-product__left flex align-center col">
+                  <a href='/product.html' class="basket-product__image">
+                    <img src="img/temp-product.png" alt="">
+                  </a>
+                  <div class="basket-product__info">
+                    <a href='/product.html' class="basket-product__title">iPhone XR <span class="basket-product__count">x 1</span>
+                    </a>
+
+                    <div class="basket-product__options flex flex-wrap">
+                      <div class="basket-product__option basket-product__option_color flex aling-center">
+                        <span style='background-color: #b40008;'></span> Красный
+                      </div>
+                      <div class="basket-product__option">64 GB</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right -->
+                <div class="basket-product__right text-right col">
+                  <button class="btn basket-product__close">
+                    <svg class="icon">
+                      <use xlink:href="#close" />
+                    </svg>
+                  </button>
+                  <div class="basket-product__price">14 999 грн.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="basket__subsummary">
+              <div class="basket__row row-flex justify-between">
+                <div class="basket__row-col col">Сумма</div>
+                <div class="basket__row-col basket__price col">29 998 грн.</div>
+              </div>
+              <div class="basket__row row-flex justify-between">
+                <div class="basket__row-col col">Доставка</div>
+                <div class="basket__row-col basket__price col">58 грн.</div>
+              </div>
+            </div>
+
+            <div class="basket__summary basket__row row-flex justify-between">
+              <div class="basket__row-col col">Итого</div>
+              <div class="basket__row-col basket__total col">30 056 грн.</div>
+            </div>
+
+            <div class="basket__buttons row-flex align-center">
+              <button class="btn btn_purple basket__btn col">Подтвердить заказ</button>
+              <a class='basket__continue col' href="#">Продолжить покупку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  @@include("../blocks/modules/footer/footer.html")
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

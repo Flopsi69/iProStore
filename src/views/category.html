@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iProService</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+</head>
+
+<body>
+  @@include("../blocks/modules/header/header.html")
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs container flex">
+    <a href="/" class="breadcrumbs__item">Главная</a>
+    <a href="/" class="breadcrumbs__item">Магазин</a>
+    <a href="/" class="breadcrumbs__item">iPhone</a>
+  </div>
+
+  <!-- Main -->
+  <main class="main page cat">
+    <div class="container">
+      <button class="btn btn_trans cat__sidebar-toggler">Фильтр</button>
+      <div class="cat__row row-flex">
+        <!-- Sidebar -->
+        <div class="sidebar cat__sidebar col">
+          <!-- Models -->
+          <div class="sidebar__block">
+            <div class="sidebar__block-title">Модели</div>
+
+            <div class="sidebar__models">
+              <div class="checkbox sidebar__models-item">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox1" name="filter-checkbox1" value="1">
+                <label class='checkbox__label label' for="filter-checkbox1">iPhone XS</label>
+              </div>
+
+              <div class="checkbox sidebar__models-item">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox2" name="filter-checkbox2" value="2">
+                <label class='checkbox__label label' for="filter-checkbox2">iPhone XS Max</label>
+              </div>
+
+              <div class="checkbox sidebar__models-item">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox3" name="filter-checkbox3" value="3">
+                <label class='checkbox__label label' for="filter-checkbox3">iPhone XR</label>
+              </div>
+
+              <div class="checkbox sidebar__models-item">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox4" name="filter-checkbox4" value="4">
+                <label class='checkbox__label label' for="filter-checkbox4">iPhone X</label>
+              </div>
+
+              <div class="checkbox sidebar__models-item">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox5" name="filter-checkbox5" value="5">
+                <label class='checkbox__label label' for="filter-checkbox5">iPhone 8</label>
+              </div>
+
+              <div class="checkbox sidebar__models-item hide">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox6" name="filter-checkbox6" value="6">
+                <label class='checkbox__label label' for="filter-checkbox6">iPhone 7</label>
+              </div>
+
+              <div class="checkbox sidebar__models-item hide">
+                <input class='checkbox__input' type="checkbox" id="filter-checkbox7" name="filter-checkbox7" value="7">
+                <label class='checkbox__label label' for="filter-checkbox7">iPhone 6</label>
+              </div>
+            </div>
+
+            <!-- Toggle more -->
+            <button class="btn sidebar__models-more flex align-center">
+              <span>Больше</span>
+              <svg class="icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Price -->
+          <div class="sidebar__block">
+            <div class="sidebar__block-title">Цена</div>
+            <div class="price-range">
+              <input type="text" class="price-range__slider" name="my_range" value="" />
+
+              <div class="price-range__inputs flex align-center">
+                <input class="input price-range__input price-range__input-from text-center" type="text" value='20000'>
+                <hr>
+                <input class="input price-range__input price-range__input-to text-center" value='50000' type="text">
+              </div>
+            </div>
+          </div>
+
+          <!-- Colors -->
+          <div class="sidebar__block">
+            <div class="sidebar__block-title">Цвет</div>
+            <div class="colors flex flex-wrap">
+              <div class="colors__option active" style='background-color:#000000'></div>
+              <div class="colors__option" style='background-color:#828282'></div>
+              <div class="colors__option" style='background-color:#ffb54b'></div>
+              <div class="colors__option" style='background-color:#5aff00'></div>
+              <div class="colors__option" style='background-color:#ff1a1a'></div>
+              <div class="colors__option" style='background-color:#2ca2b7'></div>
+            </div>
+          </div>
+
+          <!-- Banner -->
+          <div class="sidebar__block sidebar__banner">
+            <img src="img/sidebar-banner.png" alt="">
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="cat__body col">
+          <h1 class='section__title page__title'>iPhone</h1>
+
+          <div class="cat__control row-flex justify-between align-center">
+            <div class="cat__sort flex align-center col">
+              <div class="cat__sort-label">Сортировка по:</div>
+
+              <div class="select cat__sort-select">
+                <select class="select__original">
+                  <option value="0">Популярности</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="cat__finded col">
+              Найдено товаров: 24
+            </div>
+          </div>
+
+          <div class="cat__products">
+            <!-- Product -->
+            <div class="cat__product product">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product product_new">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product product_new">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product product_new hide">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product hide">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+
+            <!-- Product -->
+            <div class="cat__product product hide">
+              <div class="product__image">
+                <img src="img/temp-product.png" alt="">
+                <div class="product__options flex">
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#bag" />
+                    </svg>
+                  </button>
+                  <button class="btn product__option">
+                    <svg class="icon">
+                      <use xlink:href="#eye" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__price">
+                <svg class="icon">
+                  <use xlink:href="#apple-logo" />
+                </svg>
+                $999.99
+              </div>
+              <a href='#' class="product__title">iPhone XS Max </a>
+              <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+            </div>
+          </div>
+
+          <div class="cat__more text-center">
+            <button class='btn cat__more-btn btn_purple'>Показать ещё</button>
+          </div>
+
+          <div class="cat__pagination pagination flex justify-center align-center">
+            <a href="#" class="pagination__link pagination__link-prev disabled">
+              <svg class="icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </a>
+            <a href=" #" class="pagination__link active">1</a>
+            <a href="#" class="pagination__link">2</a>
+            <a href="#" class="pagination__link">3</a>
+            <a href="#" class="pagination__link">4</a>
+            <a href="#" class="pagination__link pagination__link-next">
+              <svg class="icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include("../blocks/modules/footer/footer.html")
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

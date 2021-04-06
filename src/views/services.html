@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iProService</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  @@include("../blocks/modules/header/header.html")
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs container flex">
+    <a href="/" class="breadcrumbs__item">Главная</a>
+    <a href="#" class="breadcrumbs__item">Сервисные услуги</a>
+  </div>
+
+  <!-- Main -->
+  <main class="main page application">
+    <div class="container">
+      <h1 class='section__title page__title'>Заявка на сервисные услуги</h1>
+      <div class="page__caption">Укажите данные для оформления ремонта вашего устройства и наш менеджер свяжется с вами в ближайшее время</div>
+
+      <div class="application__row flex align-start">
+        <div class="application__nav">
+          <div class="application__nav-logo">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="application__nav-list">
+            <div class="application__nav-item pass">Укажите устройство</div>
+            <div class="application__nav-item pass">Модель устройства</div>
+            <div class="application__nav-item pass">Выберите услугу</div>
+            <div class="application__nav-item active">Оформление заказа</div>
+          </div>
+        </div>
+
+
+        <div class="application__steps">
+          <!-- Step 1 -->
+          <div class="application__step step-one">
+            <div class="application__step-title">Шаг 1. Укажите ваше устройство</div>
+
+            <div class="step-one__list flex flex-wrap">
+              <div class="step-one__option active">iPhone</div>
+              <div class="step-one__option">iPad</div>
+              <div class="step-one__option">Macbook</div>
+              <div class="step-one__option">iMac</div>
+              <div class="step-one__option">Watch</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="application__step step-two">
+            <div class="application__step-title">Шаг 2. Выберите модель</div>
+
+            <div class="step-two__selects row-flex">
+              <div class="select step-two__select flex-inline col">
+                <select class="select__original">
+                  <option value="0">iPhone 12 Pro Max</option>
+                  <option value="2">iPhone 10</option>
+                  <option value="3">iPhone 8</option>
+                  <option value="4">iPhone 7</option>
+                </select>
+              </div>
+
+              <div class="select step-two__select flex-inline col">
+                <select class="select__original">
+                  <option value="0">256 GB</option>
+                  <option value="2">512 GB</option>
+                  <option value="3">1024 GB</option>
+                </select>
+              </div>
+
+              <div class="select step-two__select flex-inline col">
+                <select class="select__original">
+                  <option value="0">Чёрный</option>
+                  <option value="2">Белый</option>
+                  <option value="3">Красный</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Step 3 -->
+          <div class="application__step step-three">
+            <div class="application__step-title">Шаг 3. Какие услуги вас интересуют?</div>
+
+            <div class="step-three__works work__list">
+              <div class="work row-flex align-center">
+                <div class="work__name col">Диагностика</div>
+                <div class="work__term col">До 1 дня</div>
+                <div class="work__price col">*Бесплатно</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center">
+                <div class="work__name col">Замена дисплея</div>
+                <div class="work__term col">До 1 дня</div>
+                <div class="work__price col">1 500 грн.</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center">
+                <div class="work__name col">Замена аккумулятора</div>
+                <div class="work__term col">До 1 дня</div>
+                <div class="work__price col">1 000 грн.</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center">
+                <div class="work__name col">Чистка акустических каналов</div>
+                <div class="work__term col">До 1 часа</div>
+                <div class="work__price col">1 000 грн.</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center work-summary">
+                <div class="work__name col">* При условии выполнения ремонта в СЦ "IPro-Service"</div>
+                <div class="work__total work__price col">
+                  <div class="work__total-caption">Итого</div>
+                  <div class="work__total-value">2 500 грн</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="application__step step-four">
+            <div class="application__step-title">Шаг 4. Оформление заказа</div>
+
+            <!-- Contacts -->
+            <div class="step-four__block">
+              <div class="step-four__subtitle">Информация о клиенте</div>
+              <div class="step-four__contacts row-flex">
+                <div class="step-four__group input__group col">
+                  <input name='userName' id='userName' class='input input-trans step-four__input' type="text">
+                  <label class='input__label' for="userName">Ваше имя</label>
+                </div>
+
+                <div class="step-four__group input__group input_required col">
+                  <input name='userPhone' id='userPhone' class='input input-trans step-four__input' required type="text">
+                  <label class='input__label' for="userPhone">Номер телефона</label>
+                </div>
+
+                <div class="step-four__group input__group col">
+                  <input name='userEmail' id='userEmail' class='input input-trans step-four__input' type="email">
+                  <label class='input__label' for="userEmail">Почта</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery -->
+            <div class="step-four__block">
+              <div class="step-four__subtitle">Доставка</div>
+
+              <div class="step-four__row row-flex">
+                <div class="step-four__checkbox-wrap col">
+                  <div class="checkbox step-four__checkbox">
+                    <input class='checkbox__input' type="checkbox" id="step-four-checkbox1" name="step-four-checkbox1" checked value="1">
+                    <label class='checkbox__label label' for="step-four-checkbox1">Курьер для забора устройства</label>
+                  </div>
+
+                  <div class="step-four__group input__group input_required">
+                    <input name='deliveryFrom' id='deliveryFrom' required class='input input-trans step-four__input' type="text">
+                    <label class='input__label' for="deliveryFrom">Адрес получения</label>
+                  </div>
+                </div>
+
+                <div class="step-four__checkbox-wrap col">
+                  <div class="checkbox step-four__checkbox">
+                    <input class='checkbox__input' type="checkbox" id="step-four-checkbox2" name="step-four-checkbox2" value="2">
+                    <label class='checkbox__label label' for="step-four-checkbox2">Курьер для доставка устройства</label>
+                  </div>
+
+                  <div class="step-four__group input__group input_required" style='display: none;'>
+                    <input name='deliveryTo' id='deliveryTo' class='input input-trans step-four__input' required type="text">
+                    <label class='input__label' for="deliveryTo">Адрес доставки</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit  -->
+            <div class="step-four__block">
+              <button class="btn btn_purple step-four__btn">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include("../blocks/modules/footer/footer.html")
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

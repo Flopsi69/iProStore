@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>gulp-scss-starter</title>
+  <title>iProService</title>
   <meta name="theme-color" content="#fff">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -24,313 +24,343 @@
   <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom -->
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
   @@include("../blocks/modules/header/header.html")
 
-  <main class="main main-front">
+  <!-- Slider -->
+  <section class="jumb">
+    <!-- Slider Nav -->
+    <div class="jumb__nav">
+      <button class='btn jumb__nav-btn jumb__nav-prev'>
+        <svg class="icon">
+          <use xlink:href="#previous" />
+        </svg>
+      </button>
+      <button class='btn jumb__nav-btn jumb__nav-next'>
+        <svg class="icon">
+          <use xlink:href="#previous" />
+        </svg>
+      </button>
+    </div>
 
-    <!-- Sublimo -->
-    <section class="section sublimo">
-      <div class="container">
-        <!-- Title -->
-        <h1 class="sublimo__title section-title">Заготовки для сублимационной печати</h1>
-        <div class="sublimo__caption">напрямую от производителя</div>
-
-        <a href="" class="btn btn-blue sublimo__btn">Подробнее</a>
-
-        <div class="sublimo__banner text-right">
-          <img src="img/temp-sublimo-banner.png" alt="">
+    <!-- Slider inner -->
+    <div class="jumb__slider">
+      <div class="jumb__slide jumb-four">
+        <div class="container jumb-four__container">
+          <div class="jumb__info jumb-four__info text-center">
+            <h1 class="jumb__title jumb-four__title">Сервисное обслуживание</h1>
+            <div class="jumb-four__apple text-center">
+              <svg class="icon jumb-four__apple-icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              <div class="jumb-four__apple-title">Техники Apple</div>
+            </div>
+            <div class="jumb-four__services flex flex-wrap justify-center">
+              <a href='#' class="jumb-four__service">Диагностика</a>
+              <a href='#' class="jumb-four__service">Замена аккумулятора</a>
+              <a href='#' class="jumb-four__service">Замента дисплея</a>
+              <a href='#' class="jumb-four__service">Чистка</a>
+            </div>
+            <a href='#' class='btn jumb__btn jumb-four__btn'><span>Показать все услуги</span></a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Services -->
-    <section class="section services">
-      <div class="container">
-        <!-- Title -->
-        <h2 class="services__title section-title container text-center">Наши услуги</h2>
-
-        <!-- List -->
-        <div class="services__list flex align-center text-center">
-          <!-- Item -->
-          <a href='#' class="services__item">
-            <img class="services__image" src="img/temp-services-slide.png" alt="">
-            <div class="services__caption bg-dark">Полиграфия для <br> бизнеса</div>
-          </a>
-
-          <!-- Item -->
-          <a href='#' class="services__item services__item_main">
-            <img class="services__image" src="img/temp-services-slide.png" alt="">
-            <div class="services__caption services__caption_main bg-dark">Сувениры для бизнеса</div>
-          </a>
-
-          <!-- Item -->
-          <a href='#' class="services__item">
-            <img class="services__image" src="img/temp-services-slide.png" alt="">
-            <div class="services__caption bg-dark">Товары и услуги <br> для типографий</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business -->
-    <section class="section business">
-      <div class="container">
-        <div class="business__grid">
-          <div class="business__info bg-dark bg-dark-overflow">
-            <h2 class="products__title section-title">Наши товары</h2>
-            <div class="business__descr">Ассортимент качественной продукции для любого бизнеса. <br> Мы предлагаем широкий ассортимент брендированной продукции по самым низким ценам в Украине.</div>
-            <button class="btn btn-white business__btn">Показать все товары</button>
+      <div class="jumb__slide jumb-one">
+        <div class="container">
+          <div class="jumb__info text-center">
+            <h2 class="jumb__title jumb-one__title">Бесплатная диагностика</h2>
+            <div class="jumb__caption jumb-one__caption">На любую технику Apple</div>
           </div>
 
-          <!-- Product BIG -->
-          <a href='#' class="business-product business__big-product">
-            <div class="business-product__image-big">
-              <img src="img/temp-product.png" alt="">
-            </div>
-            <div class="business-product__title">Блокнот брендированный</div>
-            <div class="business-product__price">100 грн / шт.</div>
-          </a>
-
-          <!-- Product  -->
-          <a href='#' class="business-product">
-            <div class="business-product__image">
-              <img src="img/temp-product.png" alt="">
-            </div>
-            <div class="business-product__title">Чашка брендированная</div>
-            <div class="business-product__price">100 грн / шт.</div>
-          </a>
-
-          <!-- Product -->
-          <a href='#' class="business-product">
-            <div class="business-product__image">
-              <img src="img/temp-product.png" alt="">
-            </div>
-            <div class="business-product__title">Блокнот брендированный</div>
-            <div class="business-product__price">100 грн / шт.</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products -->
-    <div class="products">
-      <div class="container">
-        <div class="products__row flex">
-          <div class="products-sidebar bg-dark bg-dark-overflow ">
-            <h2 class="products__title section-title">Наши товары</h2>
-            <form action="" class="products__search search flex">
-              <input type="search" id='search' name="search" class="search__input input" placeholder="Название товара">
-              <button class="btn btn-blue btn-icon search__btn">
-                <svg id="search" viewBox="0 0 24 24">
-                  <title>search</title>
-                  <path d="m21.71 20.29-5.4-5.39a7.92 7.92 0 0 0 1.69-4.9 8 8 0 1 0 -8 8 7.92 7.92 0 0 0 4.9-1.69l5.39 5.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zm-17.71-10.29a6 6 0 1 1 6 6 6 6 0 0 1 -6-6z"></path>
-                </svg>
-              </button>
-            </form>
-
-            <ul class="products-nav">
-              <li><a href="#">Холсты</a></li>
-              <li><a href="#">Бумага</a></li>
-              <li class="active"><a href="#">Текстиль</a></li>
-              <li><a href="#">Самоклеящиеся</a></li>
-              <li><a href="#">Для ламинирования</a></li>
-              <li><a href="#">Рулонный скотч</a></li>
-              <li><a href="#">Основа под фотообои</a></li>
-              <li><a href="#">Магнитный винил</a></li>
-              <li><a href="#">Пленки под печать</a></li>
-              <li><a href="#">Порезка рулонных материалов</a></li>
-            </ul>
-          </div>
-
-          <div class="products-list__wrap">
-            <div class="products-list__head flex align-center">
-              <h3 class='products-list__title upper'>Текстиль</h3>
-              <button class="btn btn-black-trans products-list__btn">В магазин</button>
-            </div>
-
-            <!-- List -->
-            <div class="products-list">
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="products-card">
-                <div class="products-card__image">
-                  <img src="img/temp-product-image.png" alt="">
-                </div>
-                <div class="products-card__info text-center">
-                  <div class="products-card__title">Синтетический материал (полиэстер)110 г/м2, 610 мм х 30 м</div>
-                  <div class="products-card__price">980 грн./рулон</div>
-                </div>
-              </div>
-            </div>
+          <div class="jumb__btn-wrap jumb-one__btn-wrap text-center">
+            <button class='btn jumb__btn jumb-one__btn'><span>Заказать</span></button>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Holding -->
-    <section class="section holding bg-dark text-center">
+  <!-- Main -->
+  <main class="main">
+    <!-- Categories -->
+    <section class="section categories">
       <div class="container">
-        <div class="holding__logo">
-          <img src="img/logo-white.png" alt="">
+        <!-- Title -->
+        <h2 class="section__title">Выберите своё устройство</h2>
+
+        <!-- List -->
+        <div class="categories__list">
+          <!-- Item -->
+          <a href='#' class="categories__item">
+            <div class="categories__item-image">
+              <img src="img/categories-iphone.png" alt="">
+            </div>
+            <div class="categories__item-sub flex align-center">
+              <h3 class="categories__item-title">iPhone</h3>
+              <svg class="icon categories__item-icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Item -->
+          <a href='#' class="categories__item">
+            <div class="categories__item-image">
+              <img src="img/categories-ipad.png" alt="">
+            </div>
+            <div class="categories__item-sub flex align-center">
+              <h3 class="categories__item-title">iPad</h3>
+              <svg class="icon categories__item-icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Item -->
+          <a href='#' class="categories__item">
+            <div class="categories__item-image" style='padding-top: 2%;'>
+              <img src="img/categories-macbook.png" alt="">
+            </div>
+            <div class="categories__item-sub flex align-center">
+              <h3 class="categories__item-title">Macbook</h3>
+              <svg class="icon categories__item-icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Item -->
+          <a href='#' class="categories__item">
+            <div class="categories__item-image">
+              <img src="img/categories-imac.png" alt="">
+            </div>
+            <div class="categories__item-sub flex align-center">
+              <h3 class="categories__item-title">iMac</h3>
+              <svg class="icon categories__item-icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Item -->
+          <a href='#' class="categories__item">
+            <div class="categories__item-image" style='padding-top: 5%;'>
+              <img src="img/categories-watch.png" alt="">
+            </div>
+            <div class="categories__item-sub flex align-center">
+              <h3 class="categories__item-title">Watch</h3>
+              <svg class="icon categories__item-icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </div>
+          </a>
         </div>
-        <div class="holding__title">Холдинговая многопрофильная компания</div>
-        <div class="holding__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
-        <img class='holding__brochures' src="img/holding-brochures.png" alt="">
       </div>
     </section>
 
-    <!-- Clients -->
-    <section class="section clients">
-      <h2 class="clients__title section-title container text-center">Наши клиенты</h2>
-      <div class="clients__slider-wrap">
-        <div class="container clients__container">
-          <!-- Prev slide -->
-          <svg class="icon clients__nav clients__nav-prev">
-            <use xlink:href="#right-chevron" />
-          </svg>
+    <!-- Catalog -->
+    <section class="section cat-slider">
+      <div class="container">
+        <!-- Title -->
+        <h2 class="section__title">Каталог товаров</h2>
 
-          <!-- Slider -->
-          <div class="clients__slider">
-            <!-- Item -->
-            <div class="clients__slide">
-              <img src="img/temp-client.png" alt="">
-            </div>
-
-            <!-- Item -->
-            <div class="clients__slide">
-              <img src="img/temp-client.png" alt="">
-            </div>
-
-            <!-- Item -->
-            <div class="clients__slide">
-              <img src="img/temp-client.png" alt="">
-            </div>
-
-            <!-- Item -->
-            <div class="clients__slide">
-              <img src="img/temp-client.png" alt="">
-            </div>
-
-            <!-- Item -->
-            <div class="clients__slide">
-              <img src="img/temp-client.png" alt="">
-            </div>
-
-            <!-- Item -->
-            <div class="clients__slide">
-              <img src="img/temp-client.png" alt="">
-            </div>
+        <!-- Head -->
+        <div class="cat-slider__head row-flex justify-between">
+          <div class="cat-slider__filters filters flex col">
+            <button class="btn filters__option active">Все</button>
+            <button class="btn filters__option">iPhone</button>
+            <button class="btn filters__option">iPad</button>
+            <button class="btn filters__option">Macbook</button>
+            <button class="btn filters__option">iMac</button>
+            <button class="btn filters__option">Watch</button>
           </div>
 
-          <!-- Next slide -->
-          <svg class="icon clients__nav clients__nav-next">
-            <use xlink:href="#right-chevron" />
-          </svg>
+          <div class="cat-slider__nav flex col">
+            <button class='btn cat-slider__nav-btn cat-slider__nav-prev'>
+              <svg class="icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </button>
+            <button class='btn cat-slider__nav-btn cat-slider__nav-next'>
+              <svg class="icon">
+                <use xlink:href="#previous" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Callback -->
-    <section class="section callback">
-      <div class="container">
-        <div class="callback__row row-flex align-end">
-          <form action="" class="callback-form bg-dark bg-dark-overflow  col">
-            <div class="callback-form__title text-center">Заказать звонок</div>
-            <input class="input callback-form__input w-100" type="text" placeholder="Введите имя">
-            <input class="input callback-form__input w-100" type="tel" placeholder="Введите номер телефона">
-            <button class="btn btn-blue callback-form__btn w-100">Перезвоните мне</button>
-          </form>
+        <!-- Slider -->
+        <div class="cat-slider__list">
+          <!-- Slide -->
+          <div class="cat-slider__item product">
+            <div class="product__image">
+              <img src="img/temp-product.png" alt="">
+              <div class="product__options flex">
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#bag" />
+                  </svg>
+                </button>
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#eye" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product__price">
+              <svg class="icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              $999.99
+            </div>
+            <a href='#' class="product__title">iPhone XS Max </a>
+            <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+          </div>
 
-          <div class="callback-ask flex align-center col">
-            <div class="callback-ask__girl">
-              <img src="img/callback-girl.png" alt="">
+          <!-- Slide -->
+          <div class="cat-slider__item product">
+            <div class="product__image">
+              <img src="img/temp-product.png" alt="">
+              <div class="product__options flex">
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#bag" />
+                  </svg>
+                </button>
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#eye" />
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="callback-ask__info">
-              <h2 class="callback-ask__title section-title">Остались вопросы?</h2>
-              <div class="callback-ask__descr">Заполните форму и мы свяжемся с вами. <br> Наш менеджер ответит на все ваши вопросы и предложит лучший вариант для вашей задачи.</div>
+            <div class="product__price">
+              <svg class="icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              $999.99
             </div>
+            <a href='#' class="product__title">iPhone XS Max </a>
+            <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+          </div>
+
+          <!-- Slide -->
+          <div class="cat-slider__item product">
+            <div class="product__image">
+              <img src="img/temp-product.png" alt="">
+              <div class="product__options flex">
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#bag" />
+                  </svg>
+                </button>
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#eye" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product__price">
+              <svg class="icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              $999.99
+            </div>
+            <a href='#' class="product__title">iPhone XS Max </a>
+            <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+          </div>
+
+          <!-- Slide -->
+          <div class="cat-slider__item product">
+            <div class="product__image">
+              <img src="img/temp-product.png" alt="">
+              <div class="product__options flex">
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#bag" />
+                  </svg>
+                </button>
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#eye" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product__price">
+              <svg class="icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              $999.99
+            </div>
+            <a href='#' class="product__title">iPhone XS Max </a>
+            <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+          </div>
+
+          <!-- Slide -->
+          <div class="cat-slider__item product">
+            <div class="product__image">
+              <img src="img/temp-product.png" alt="">
+              <div class="product__options flex">
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#bag" />
+                  </svg>
+                </button>
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#eye" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product__price">
+              <svg class="icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              $999.99
+            </div>
+            <a href='#' class="product__title">iPhone XS Max </a>
+            <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
+          </div>
+
+          <!-- Slide -->
+          <div class="cat-slider__item product">
+            <div class="product__image">
+              <img src="img/temp-product.png" alt="">
+              <div class="product__options flex">
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#bag" />
+                  </svg>
+                </button>
+                <button class="btn product__option">
+                  <svg class="icon">
+                    <use xlink:href="#eye" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product__price">
+              <svg class="icon">
+                <use xlink:href="#apple-logo" />
+              </svg>
+              $999.99
+            </div>
+            <a href='#' class="product__title">iPhone XS Max </a>
+            <div class="product__descr">Самый большой смартфон от Apple с закругленными углами и тонкими рамками. </div>
           </div>
         </div>
       </div>

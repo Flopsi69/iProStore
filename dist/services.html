@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iProService</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Header -->
+<header class="header bg-dark">
+  <div class="header__main">
+    <div class="container">
+      <div class="header__row row-flex flex-nowrap align-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="header__logo col">
+          <img src="img/logo-white.svg" alt="" />
+        </a>
+
+        <div class="header__main-nav flex align-center col">
+          <div class="header__toggler flex align-center">
+            <a href="/" class="header__main-link active">Сервис</a>
+            <button class="header__toggler-btn"></button>
+            <a href="shop.html" class="header__main-link">Магазин</a>
+          </div>
+          <a href="/about.html" class="header__main-link header__main-about">О нас</a>
+        </div>
+
+        <div class="header__contacts text-right col">
+          <div class="header__contacts-item header__contacts-phones flex-inline align-center">
+            <a href='tel:+380960992599' class="header__phone">+38 (096) 099-25-99</a>
+            <svg class="icon">
+              <use xlink:href="#previous" />
+            </svg>
+
+            <div class="header__phones" style='display: none;'>
+              <a href="tel:+380960992599" class="header__phone">+38 (096) 099-25-99</a>
+              <a href="tel:+380960992599" class="header__phone">+38 (096) 099-25-99</a>
+              <a href="tel:+380960992599" class="header__phone">+38 (096) 099-25-99</a>
+            </div>
+          </div>
+
+          <div class="header__contacts-item flex-inline align-center">
+            <div class="header__address">г. Киев ул. Бастионная 2/1</div>
+            <svg class="icon">
+              <use xlink:href="#google-maps" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__sub">
+    <div class="container">
+      <div class="header__sub-row row-flex align-center justify-between flex-nowrap">
+        <a href='/services.html' class="header__sub-service flex align-center col">
+          <svg class="icon">
+            <use xlink:href="#customer-support" />
+          </svg>
+          Сервисные услуги
+        </a>
+
+        <nav class="nav header__sub-nav text-center col">
+          <a href='/category.html' class="nav__link">iPhone</a>
+          <a href='/category.html' class="nav__link">iPad</a>
+          <a href='/category.html' class="nav__link">iMac</a>
+          <a href='/category.html' class="nav__link">Macbook</a>
+          <a href='/category.html' class="nav__link">Watch</a>
+        </nav>
+
+        <div class="header__sub-control flex align-center justify-end col">
+          <form class="header__search flex align-center">
+            <input class='input header__search-input' type="text" placeholder="Search...">
+            <button type='submit' class='btn header__search-btn'>
+              <svg class="icon">
+                <use xlink:href="#search" />
+              </svg>
+            </button>
+          </form>
+
+          <div class="header__basket">
+            <div class="header__basket-preview active">
+              <div class="header__basket-count">2</div>
+              <svg class="icon">
+                <use xlink:href="#bag" />
+              </svg>
+            </div>
+
+            <div class="header__basket-body">
+              <div class="basket__products">
+                <!-- Product -->
+                <div class="basket-product header__basket-product row-flex flex-nowrap justify-between align-center">
+                  <!-- Left -->
+                  <div class="basket-product__left flex align-center col">
+                    <a href='/product.html' class="basket-product__image">
+                      <img src="img/temp-product.png" alt="">
+                    </a>
+                    <div class="basket-product__info">
+                      <a href="/product.html" class="basket-product__title header__basket-title">iPhone XR <span class="basket-product__count">x 1</span></a>
+
+
+                      <div class="basket-product__options header__basket-options">
+                        <div class="basket-product__option basket-product__option_color flex aling-center">
+                          <span style="background-color: #000;"></span> Чёрный
+                        </div>
+                        <div class="basket-product__option">64 GB</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right -->
+                  <div class="basket-product__right text-right col">
+                    <button class="btn basket-product__close">
+                      <svg class="icon">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                    <div class="basket-product__price header__basket-price">14 999 грн.</div>
+                  </div>
+                </div>
+
+                <!-- Product -->
+                <div class="basket-product header__basket-product row-flex flex-nowrap justify-between align-center">
+                  <!-- Left -->
+                  <div class="basket-product__left flex align-center col">
+                    <a href='/product.html' class="basket-product__image">
+                      <img src="img/temp-product.png" alt="">
+                    </a>
+                    <div class="basket-product__info">
+                      <a href="/product.html" class="basket-product__title header__basket-title">iPhone XR <span class="basket-product__count">x 1</span></a>
+
+                      <div class="basket-product__options header__basket-options">
+                        <div class="basket-product__option basket-product__option_color flex aling-center">
+                          <span style="background-color: #000;"></span> Чёрный
+                        </div>
+                        <div class="basket-product__option">64 GB</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right -->
+                  <div class="basket-product__right text-right col">
+                    <button class="btn basket-product__close">
+                      <svg class="icon">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                    <div class="basket-product__price header__basket-price">14 999 грн.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__basket-total text-right">
+                Итого: <span>29 998 грн.</span>
+              </div>
+
+              <button class="btn btn_purple header__basket-btn w-100">Оформить заказ</button>
+            </div>
+          </div>
+
+          <button class="btn burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs container flex">
+    <a href="/" class="breadcrumbs__item">Главная</a>
+    <a href="#" class="breadcrumbs__item">Сервисные услуги</a>
+  </div>
+
+  <!-- Main -->
+  <main class="main page application">
+    <div class="container">
+      <h1 class='section__title page__title'>Заявка на сервисные услуги</h1>
+      <div class="page__caption">Укажите данные для оформления ремонта вашего устройства и наш менеджер свяжется с вами в ближайшее время</div>
+
+      <div class="application__row flex align-start">
+        <div class="application__nav">
+          <div class="application__nav-logo">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="application__nav-list">
+            <div class="application__nav-item pass">Укажите устройство</div>
+            <div class="application__nav-item pass">Модель устройства</div>
+            <div class="application__nav-item pass">Выберите услугу</div>
+            <div class="application__nav-item active">Оформление заказа</div>
+          </div>
+        </div>
+
+
+        <div class="application__steps">
+          <!-- Step 1 -->
+          <div class="application__step step-one">
+            <div class="application__step-title">Шаг 1. Укажите ваше устройство</div>
+
+            <div class="step-one__list flex flex-wrap">
+              <div class="step-one__option active">iPhone</div>
+              <div class="step-one__option">iPad</div>
+              <div class="step-one__option">Macbook</div>
+              <div class="step-one__option">iMac</div>
+              <div class="step-one__option">Watch</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="application__step step-two">
+            <div class="application__step-title">Шаг 2. Выберите модель</div>
+
+            <div class="step-two__selects row-flex">
+              <div class="select step-two__select flex-inline col">
+                <select class="select__original">
+                  <option value="0">iPhone 12 Pro Max</option>
+                  <option value="2">iPhone 10</option>
+                  <option value="3">iPhone 8</option>
+                  <option value="4">iPhone 7</option>
+                </select>
+              </div>
+
+              <div class="select step-two__select flex-inline col">
+                <select class="select__original">
+                  <option value="0">256 GB</option>
+                  <option value="2">512 GB</option>
+                  <option value="3">1024 GB</option>
+                </select>
+              </div>
+
+              <div class="select step-two__select flex-inline col">
+                <select class="select__original">
+                  <option value="0">Чёрный</option>
+                  <option value="2">Белый</option>
+                  <option value="3">Красный</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Step 3 -->
+          <div class="application__step step-three">
+            <div class="application__step-title">Шаг 3. Какие услуги вас интересуют?</div>
+
+            <div class="step-three__works work__list">
+              <div class="work row-flex align-center">
+                <div class="work__name col">Диагностика</div>
+                <div class="work__term col">До 1 дня</div>
+                <div class="work__price col">*Бесплатно</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center">
+                <div class="work__name col">Замена дисплея</div>
+                <div class="work__term col">До 1 дня</div>
+                <div class="work__price col">1 500 грн.</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center">
+                <div class="work__name col">Замена аккумулятора</div>
+                <div class="work__term col">До 1 дня</div>
+                <div class="work__price col">1 000 грн.</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center">
+                <div class="work__name col">Чистка акустических каналов</div>
+                <div class="work__term col">До 1 часа</div>
+                <div class="work__price col">1 000 грн.</div>
+                <div class="work__btn-wrap col">
+                  <button class="btn btn_purple work__btn">Выбрать услугу</button>
+                </div>
+              </div>
+
+              <div class="work row-flex align-center work-summary">
+                <div class="work__name col">* При условии выполнения ремонта в СЦ "IPro-Service"</div>
+                <div class="work__total work__price col">
+                  <div class="work__total-caption">Итого</div>
+                  <div class="work__total-value">2 500 грн</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="application__step step-four">
+            <div class="application__step-title">Шаг 4. Оформление заказа</div>
+
+            <!-- Contacts -->
+            <div class="step-four__block">
+              <div class="step-four__subtitle">Информация о клиенте</div>
+              <div class="step-four__contacts row-flex">
+                <div class="step-four__group input__group col">
+                  <input name='userName' id='userName' class='input input-trans step-four__input' type="text">
+                  <label class='input__label' for="userName">Ваше имя</label>
+                </div>
+
+                <div class="step-four__group input__group input_required col">
+                  <input name='userPhone' id='userPhone' class='input input-trans step-four__input' required type="text">
+                  <label class='input__label' for="userPhone">Номер телефона</label>
+                </div>
+
+                <div class="step-four__group input__group col">
+                  <input name='userEmail' id='userEmail' class='input input-trans step-four__input' type="email">
+                  <label class='input__label' for="userEmail">Почта</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery -->
+            <div class="step-four__block">
+              <div class="step-four__subtitle">Доставка</div>
+
+              <div class="step-four__row row-flex">
+                <div class="step-four__checkbox-wrap col">
+                  <div class="checkbox step-four__checkbox">
+                    <input class='checkbox__input' type="checkbox" id="step-four-checkbox1" name="step-four-checkbox1" checked value="1">
+                    <label class='checkbox__label label' for="step-four-checkbox1">Курьер для забора устройства</label>
+                  </div>
+
+                  <div class="step-four__group input__group input_required">
+                    <input name='deliveryFrom' id='deliveryFrom' required class='input input-trans step-four__input' type="text">
+                    <label class='input__label' for="deliveryFrom">Адрес получения</label>
+                  </div>
+                </div>
+
+                <div class="step-four__checkbox-wrap col">
+                  <div class="checkbox step-four__checkbox">
+                    <input class='checkbox__input' type="checkbox" id="step-four-checkbox2" name="step-four-checkbox2" value="2">
+                    <label class='checkbox__label label' for="step-four-checkbox2">Курьер для доставка устройства</label>
+                  </div>
+
+                  <div class="step-four__group input__group input_required" style='display: none;'>
+                    <input name='deliveryTo' id='deliveryTo' class='input input-trans step-four__input' required type="text">
+                    <label class='input__label' for="deliveryTo">Адрес доставки</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit  -->
+            <div class="step-four__block">
+              <button class="btn btn_purple step-four__btn">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+<footer class="footer bg-dark">
+  <div class="container">
+    <div class="footer__row flex justify-between">
+      <!-- Column -->
+      <div class="footer__block footer__about-wrap">
+        <h3 class="footer__title">О нас</h3>
+        <div class="footer__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      </div>
+
+      <!-- Column -->
+      <div class="footer__block text-center">
+        <h3 class="footer__title">Подписывайтесь</h3>
+
+        <!-- Socials -->
+        <div class="footer__socials flex align-center justify-center">
+          <!-- Link -->
+          <a href="#" class="footer__socials-link">
+            <svg class="icon">
+              <use xlink:href="#instagram" />
+            </svg>
+          </a>
+
+          <!-- Link -->
+          <a href="#" class="footer__socials-link">
+            <svg class="icon">
+              <use xlink:href="#telegram" />
+            </svg>
+          </a>
+
+          <!-- Link -->
+          <a href="#" class="footer__socials-link">
+            <svg class="icon">
+              <use xlink:href="#facebook" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column -->
+      <div class="footer__block">
+        <h3 class="footer__title">Контакты</h3>
+
+        <div class="footer__phones">
+          <a href="tel:+380992322323" class="footer__phones-item footer-contact">
+            <svg class="icon">
+              <use xlink:href="#phone-call" />
+            </svg>
+            +38 (099) 232-23-23
+          </a>
+          <a href="tel:+380992322323" class="footer__phones-item footer-contact">
+            <svg class="icon">
+              <use xlink:href="#phone-call" />
+            </svg>
+            +38 (099) 232-23-23
+          </a>
+          <a href="tel:+380992322323" class="footer__phones-item footer-contact">
+            <svg class="icon">
+              <use xlink:href="#phone-call" />
+            </svg>
+            +38 (099) 232-23-23
+          </a>
+        </div>
+
+        <div class="footer__address-wrap">
+          <div class="footer-contact footer__address">
+            <svg class="icon">
+              <use xlink:href="#placeholder-filled-point" />
+            </svg>
+            r. Киев, ул. Бастионная 2/1
+          </div>
+          <a href='#' class="footer__address-map">Как добраться?</a>
+        </div>
+
+        <div class="footer__mails">
+          <a href="mainto:ipro@service.ua" class="footer__mails-item footer-contact">
+            <svg class="icon">
+              <use xlink:href="#email" />
+            </svg>
+            ipro@service.ua
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="copyright text-center">Все права защищены</div>
+</footer>
+
+
+
+<!-- SVG sprite -->
+<div hidden>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="power-button" viewBox="0 0 384 384">
+      <title>power-button</title>
+      <path d="M256,55.232v47.424c38.208,22.187,64,63.445,64,110.677c0,70.592-57.408,128-128,128s-128-57.408-128-128 c0-47.253,25.792-88.491,64-110.677V55.232C65.536,80.619,21.333,141.867,21.333,213.333C21.333,307.435,97.899,384,192,384 s170.667-76.565,170.667-170.667C362.667,141.867,318.464,80.619,256,55.232z" />
+      <rect x="170.667" y="0" width="42.667" height="170.667" />
+    </symbol>
+    <symbol id="previous" viewBox="0 0 32 32">
+      <title>previous</title>
+      <path id="Path" d="m20.2928932 4.29289322 1.4142136 1.41421356-10.2921068 10.29289322 10.2921068 10.2928932-1.4142136 1.4142136-11.70710676-11.7071068z" fill-rule="nonzero" />
+    </symbol>
+    <symbol id="google-maps" viewBox="0 0 512 512">
+      <title>google-maps</title>
+      <path d="m307.79 223.476-53.135 78.467-78.573 78.18c-29.222-37.139-61.132-73.116-80.587-116.631l42.352-64.879 64.957-62.668c-21.71 26.831-20.089 66.293 4.864 91.246 26.696 26.696 69.968 26.696 96.663 0 1.203-1.203 2.365-2.446 3.459-3.715z" fill="#ecb72b" />
+      <path d="m309.02 222.003c21.9-26.844 20.346-66.442-4.688-91.462-26.696-26.696-69.968-26.696-96.663 0-1.121 1.121-2.189 2.27-3.215 3.445l44.811-72.847 60.795-52.809c45.407 14.374 82.964 46.379 104.648 87.977l-44.352 71.516z" fill="#5085f7" />
+      <path d="m202.802 135.949-107.312 127.549c-10.643-23.783-17.562-49.817-18.276-79.529-.054-1.689-.081-3.391-.081-5.093 0-43.718 15.685-83.789 41.746-114.861z" fill="#da2f2a" />
+      <path d="m202.802 135.949-83.926-71.939c32.816-39.125 82.06-64.01 137.126-64.01 18.845 0 37.009 2.916 54.065 8.32z" fill="#4274eb" />
+      <path d="m434.867 178.865c0-29.779-7.278-57.859-20.151-82.558l-238.64 283.826c27.113 34.488 51.887 69.985 62.183 113.454.33 1.392.685 3.019 1.063 4.848 3.733 18.086 29.63 18.086 33.363 0 .378-1.829.733-3.456 1.063-4.848 27.448-115.892 157.807-175.118 161.043-309.618.046-1.696.076-3.397.076-5.104z" fill="#60a850" />
+    </symbol>
+    <symbol id="customer-support" viewBox="0 0 1708 1708.7495">
+      <title>customer-support</title>
+      <path d="M 224.941406 305.355469 C 230.28125 306.695312 235.167969 309.464844 239.0625 313.355469 L 674.136719 748.4375 L 752.863281 669.71875 L 317.78125 234.636719 C 313.878906 230.738281 311.121094 225.835938 309.773438 220.480469 L 282.390625 111.324219 L 100.867188 7.546875 L 11.976562 96.433594 L 115.785156 278.082031 Z M 224.941406 305.355469 " style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" />
+      <path d="M 611.824219 1297.789062 L 1302.21875 607.382812 C 1309.78125 599.8125 1320.753906 596.777344 1331.128906 599.359375 C 1422.027344 622.65625 1518.578125 602.46875 1592.558594 544.75 C 1666.550781 487.027344 1709.589844 398.261719 1709.09375 304.429688 C 1709.09375 298.714844 1708.925781 292.957031 1708.554688 287.148438 L 1547.976562 447.707031 C 1539.839844 455.851562 1527.773438 458.707031 1516.835938 455.058594 L 1334.199219 394.171875 C 1325.105469 391.160156 1317.972656 384.027344 1314.9375 374.941406 L 1254.066406 192.300781 C 1250.414062 181.378906 1253.261719 169.308594 1261.417969 161.15625 L 1421.992188 0.585938 C 1325.296875 -5.429688 1231.550781 35.195312 1169.789062 109.835938 C 1108.035156 184.492188 1085.71875 284.1875 1109.738281 378.035156 C 1112.339844 388.425781 1109.308594 399.394531 1101.738281 406.960938 L 411.355469 1097.320312 C 403.78125 1104.832031 392.820312 1107.878906 382.4375 1105.335938 C 358.402344 1099.164062 333.683594 1095.964844 308.855469 1095.867188 C 177.757812 1095.003906 60.621094 1177.648438 17.457031 1301.464844 C -25.683594 1425.269531 14.71875 1562.820312 117.96875 1643.625 C 221.21875 1724.429688 364.445312 1730.609375 474.257812 1658.96875 C 584.078125 1587.332031 636.148438 1453.769531 603.785156 1326.699219 C 601.210938 1316.328125 604.253906 1305.339844 611.824219 1297.789062 Z M 382.949219 1522.03125 L 234.785156 1522.03125 L 161.710938 1400.277344 L 234.785156 1278.503906 L 382.949219 1278.503906 L 456.007812 1400.277344 Z M 500.425781 1165.667969 L 1170.097656 495.988281 L 1213.132812 539.03125 L 543.460938 1208.710938 Z M 500.425781 1165.667969 " style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" />
+      <path d="M 1459.5 1692.867188 C 1527.300781 1718.359375 1603.742188 1701.828125 1654.964844 1650.609375 C 1706.191406 1599.375 1722.726562 1522.921875 1697.222656 1455.136719 Z M 1459.5 1692.867188 " style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" />
+      <path d="M 1654.96875 1389.199219 L 1313.082031 1047.175781 C 1275.371094 1078.875 1219.683594 1076.464844 1184.828125 1041.652344 C 1149.96875 1006.847656 1147.511719 951.175781 1179.15625 913.425781 L 1130.738281 864.949219 L 869.382812 1126.316406 L 918.09375 1175.023438 C 955.804688 1143.324219 1011.5 1145.726562 1046.335938 1180.527344 C 1081.191406 1215.339844 1083.664062 1271.019531 1052.015625 1308.773438 L 1393.613281 1650.550781 C 1397.339844 1654.277344 1401.273438 1657.730469 1405.246094 1661.089844 L 1665.515625 1400.820312 C 1662.164062 1396.839844 1658.695312 1392.921875 1654.96875 1389.199219 Z M 1474.492188 1513.105469 L 1170.097656 1208.710938 L 1213.132812 1165.667969 L 1517.535156 1470.078125 Z M 1474.492188 1513.105469 " style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" />
+    </symbol>
+    <symbol id="bag" viewBox="0 0 32 32">
+      <title>bag</title>
+      <path d="m16 1a6 6 0 0 0 -6 6v1h-.83a3.27 3.27 0 0 0 -3.27 3.12l-.79 16.45a3.28 3.28 0 0 0 3.27 3.43h15.24a3.28 3.28 0 0 0 3.27-3.43l-.79-16.45a3.27 3.27 0 0 0 -3.27-3.12h-.83v-1a6 6 0 0 0 -6-6zm-4 6a4 4 0 0 1 8 0v1h-8zm12.1 4.21.79 16.46a1.31 1.31 0 0 1 -.35.94 1.29 1.29 0 0 1 -.92.39h-15.24a1.29 1.29 0 0 1 -.92-.39 1.31 1.31 0 0 1 -.35-.94l.79-16.46a1.27 1.27 0 0 1 1.27-1.21h13.66a1.27 1.27 0 0 1 1.27 1.21z" />
+      <circle cx="11.36" cy="12.19" r="1" />
+      <circle cx="20.64" cy="12.19" r="1" />
+    </symbol>
+    <symbol id="search" viewBox="0 0 511.999 511.999">
+      <title>search</title>
+      <path d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667 S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732 c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667 c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z" />
+    </symbol>
+    <symbol id="apple-black-logo" viewBox="0 0 502.657 502.657">
+      <title>apple-black-logo</title>
+      <path d="M389.063,281.758c-13.827-69.587,52.223-110.399,52.223-110.399s-25.734-37.231-68.983-46.809 c-43.228-9.599-64.863,2.394-86.456,11.389c-21.614,9.017-32.399,9.017-32.399,9.017c-31.191,0-53.992-33.025-113.419-17.99 c-40.941,10.332-84.04,57.594-91.827,114.002c-7.787,56.429,9.017,128.432,41.416,184.236 c32.399,55.847,65.403,76.835,88.828,77.439c23.426,0.582,46.809-16.782,75.002-21.01c28.215-4.185,45.579,10.225,73.254,18.012 c27.567,7.766,37.231,0.561,68.983-26.446c31.838-27.007,60.657-104.467,60.657-104.467S402.89,351.388,389.063,281.758z" />
+      <path d="M327.845,79.531C358.475,48.319,348.1,0,348.1,0s-43.012,7.55-71.831,37.533c-28.797,30.005-24.03,77.396-24.03,77.396 S297.214,110.723,327.845,79.531z" />
+    </symbol>
+    <symbol id="eye" viewBox="0 0 64 64">
+      <title>eye</title>
+      <path d="m63.603 30.804c-.572-.768-14.23-18.804-31.603-18.804s-31.03 18.036-31.602 18.804c-.53.71-.53 1.683 0 2.393.572.767 14.229 18.803 31.602 18.803s31.03-18.036 31.602-18.804c.531-.709.531-1.682.001-2.392zm-15.603 1.196c0 8.822-7.178 16-16 16s-16-7.178-16-16 7.178-16 16-16c8.823 0 16 7.178 16 16zm-43.43 0c1.59-1.893 5.05-5.713 9.665-9.147-1.419 2.745-2.235 5.85-2.235 9.147s.815 6.402 2.234 9.146c-4.615-3.433-8.075-7.253-9.664-9.146zm45.196 9.147c1.419-2.745 2.234-5.85 2.234-9.147s-.815-6.402-2.234-9.147c4.615 3.434 8.075 7.253 9.665 9.147-1.59 1.893-5.05 5.713-9.665 9.147z" />
+      <path d="m32 40c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8zm0-12c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z" />
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <title>facebook</title>
+      <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 512.00096 512.00096">
+      <title>instagram</title>
+      <path d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm-117.40625 395.996094c-77.195312 0-139.996094-62.800782-139.996094-139.996094s62.800782-139.996094 139.996094-139.996094 139.996094 62.800782 139.996094 139.996094-62.800782 139.996094-139.996094 139.996094zm143.34375-246.976563c-22.8125 0-41.367188-18.554687-41.367188-41.367187s18.554688-41.371094 41.367188-41.371094 41.371094 18.558594 41.371094 41.371094-18.558594 41.367187-41.371094 41.367187zm0 0" />
+      <path d="m256 146.019531c-60.640625 0-109.980469 49.335938-109.980469 109.980469 0 60.640625 49.339844 109.980469 109.980469 109.980469 60.644531 0 109.980469-49.339844 109.980469-109.980469 0-60.644531-49.335938-109.980469-109.980469-109.980469zm0 0" />
+      <path d="m399.34375 96.300781c-6.257812 0-11.351562 5.09375-11.351562 11.351563 0 6.257812 5.09375 11.351562 11.351562 11.351562 6.261719 0 11.355469-5.089844 11.355469-11.351562 0-6.261719-5.09375-11.351563-11.355469-11.351563zm0 0" />
+    </symbol>
+    <symbol id="telegram" viewBox="0 0 300 300">
+      <title>telegram</title>
+      <path id="XMLID_497_" d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412 c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22 c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207 c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146 c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z" />
+    </symbol>
+    <symbol id="phone-call" viewBox="0 0 32 32">
+      <title>phone-call</title>
+      <path d="m30.035 22.6c-.082-.065-6.035-4.356-7.669-4.048-.78.138-1.226.67-2.121 1.735-.144.172-.49.584-.759.877a12.517 12.517 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.27.706-.616.882-.764 1.06-.89 1.593-1.336 1.731-2.118.283-1.62-4.005-7.614-4.05-7.668a2.289 2.289 0 0 0 -1.705-.97c-1.738 0-6.7 6.437-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.025 7.888 14.428 7.979 14.491 7.979 1.085 0 7.521-4.962 7.521-6.7a2.283 2.283 0 0 0 -.965-1.7z" />
+    </symbol>
+    <symbol id="placeholder-filled-point" viewBox="0 0 97.713 97.713">
+      <title>placeholder-filled-point</title>
+      <path d="M48.855,0C29.021,0,12.883,16.138,12.883,35.974c0,5.174,1.059,10.114,3.146,14.684 c8.994,19.681,26.238,40.46,31.31,46.359c0.38,0.441,0.934,0.695,1.517,0.695s1.137-0.254,1.517-0.695 c5.07-5.898,22.314-26.676,31.311-46.359c2.088-4.57,3.146-9.51,3.146-14.684C84.828,16.138,68.69,0,48.855,0z M48.855,54.659 c-10.303,0-18.686-8.383-18.686-18.686c0-10.304,8.383-18.687,18.686-18.687s18.686,8.383,18.686,18.687 C67.542,46.276,59.159,54.659,48.855,54.659z" />
+    </symbol>
+    <symbol id="email" viewBox="0 0 230.17 230.17">
+      <title>email</title>
+      <path d="M230,49.585c0-0.263,0.181-0.519,0.169-0.779l-70.24,67.68l70.156,65.518c0.041-0.468-0.085-0.94-0.085-1.418V49.585z" />
+      <path d="M149.207,126.901l-28.674,27.588c-1.451,1.396-3.325,2.096-5.2,2.096c-1.836,0-3.672-0.67-5.113-2.013l-28.596-26.647 L11.01,195.989c1.717,0.617,3.56,1.096,5.49,1.096h197.667c2.866,0,5.554-0.873,7.891-2.175L149.207,126.901z" />
+      <path d="M115.251,138.757L222.447,35.496c-2.427-1.443-5.252-2.411-8.28-2.411H16.5c-3.943,0-7.556,1.531-10.37,3.866 L115.251,138.757z" />
+      <path d="M0,52.1v128.484c0,1.475,0.339,2.897,0.707,4.256l69.738-67.156L0,52.1z" />
+    </symbol>
+    <symbol id="checked" viewBox="0 0 515.556 515.556">
+      <title>checked</title>
+      <path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z" />
+    </symbol>
+    <symbol id="apple-logo" viewBox="0 0 22.773 22.773">
+      <title>apple-logo</title>
+      <path d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z" />
+      <path d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z" />
+    </symbol>
+    <symbol id="warranty" viewBox="0 0 468 468">
+      <title>warranty</title>
+      <g>
+        <path d="m234 112.945c-46.201 0-83.788 37.141-83.788 82.793s37.587 82.793 83.788 82.793 83.788-37.141 83.788-82.793-37.587-82.793-83.788-82.793zm-2.938 122.629c-5.891 6.155-16.297 5.855-21.819-.655l-25.259-29.766 22.41-19.016 14.712 17.337 43.543-45.476 21.229 20.326z" />
+        <path d="m327.157 0h-186.238c-5.461 41.428-37.174 75.725-80.78 87.148-.385 169.209 82.876 249.547 135.84 283.503h69.963c54.739-38.059 140.874-123.372 141.914-283.525-43.567-11.443-75.241-45.721-80.699-87.126zm-93.157 307.923c-62.407 0-113.179-50.325-113.179-112.185s50.772-112.184 113.179-112.184 113.179 50.325 113.179 112.185-50.772 112.184-113.179 112.184z" />
+      </g>
+      <g id="XMLID_136_">
+        <path d="m97.433 468h273.435v-67.957h-273.435z" />
+        <path d="m400.258 439.326h67.742v-63.941h-67.751z" />
+        <path d="m0 439.326h67.997l-.198-63.941h-67.799z" />
+      </g>
+    </symbol>
+    <symbol id="box" viewBox="0 0 512 512">
+      <title>box</title>
+      <g>
+        <g>
+          <polygon points="320,92.272 320,92.144 415.808,135.056 512,98.992 256,2.992 0,98.992 256,194.992 351.808,159.056 256,119.568 256,119.472 " />
+        </g>
+      </g>
+      <g>
+        <g>
+          <path d="M0,130.992v288l240,90.016v-288L0,130.992z M128,420.048l-64-24v-34.144l64,24V420.048z" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <polygon points="416,166.992 416,247.152 352,271.152 352,190.992 272,221.008 272,509.008 512,418.992 512,130.992 " />
+        </g>
+      </g>
+    </symbol>
+    <symbol id="loading" viewBox="0 0 330 330">
+      <title>loading</title>
+      <path id="XMLID_4_" d="M97.5,165c0-8.284-6.716-15-15-15h-60c-8.284,0-15,6.716-15,15s6.716,15,15,15h60 C90.784,180,97.5,173.284,97.5,165z" />
+      <path id="XMLID_5_" d="M307.5,150h-30c-8.284,0-15,6.716-15,15s6.716,15,15,15h30c8.284,0,15-6.716,15-15S315.784,150,307.5,150z" />
+      <path id="XMLID_6_" d="M172.5,90c8.284,0,15-6.716,15-15V15c0-8.284-6.716-15-15-15s-15,6.716-15,15v60 C157.5,83.284,164.216,90,172.5,90z" />
+      <path id="XMLID_7_" d="M172.501,240c-8.284,0-15,6.716-15,15v60c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-60 C187.501,246.716,180.785,240,172.501,240z" />
+      <path id="XMLID_8_" d="M77.04,48.327c-5.856-5.858-15.354-5.857-21.213,0c-5.858,5.858-5.858,15.355,0,21.213l42.427,42.428 c2.929,2.929,6.768,4.394,10.606,4.394c3.838,0,7.678-1.465,10.606-4.393c5.858-5.858,5.858-15.355,0-21.213L77.04,48.327z" />
+      <path id="XMLID_9_" d="M246.746,218.034c-5.857-5.857-15.355-5.857-21.213,0c-5.858,5.858-5.857,15.355,0,21.213l42.428,42.426 c2.929,2.929,6.768,4.393,10.607,4.393c3.839,0,7.678-1.465,10.606-4.393c5.858-5.858,5.858-15.355,0-21.213L246.746,218.034z" />
+      <path id="XMLID_10_" d="M98.254,218.034L55.828,260.46c-5.858,5.858-5.858,15.355,0,21.213c2.929,2.929,6.768,4.393,10.607,4.393 c3.839,0,7.678-1.464,10.606-4.393l42.426-42.426c5.858-5.858,5.858-15.355,0-21.213 C113.609,212.176,104.111,212.176,98.254,218.034z" />
+    </symbol>
+    <symbol id="close" viewBox="0 0 329.26933 329">
+      <title>close</title>
+      <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
+    </symbol>
+  </svg>
+</div>
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>
