@@ -1691,6 +1691,7 @@ input {
 }
 
 .cat__sidebar-toggler {
+  display: none;
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 25px;
@@ -3303,6 +3304,10 @@ input {
   .cat__sidebar {
     margin-bottom: 30px;
     display: none;
+  }
+
+  .cat__sidebar-toggler {
+    display: block;
   }
 
   .cat__body {

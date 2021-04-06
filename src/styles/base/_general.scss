@@ -1396,10 +1396,14 @@ input {
       display: none;
     }
     &-toggler {
+      display: none;
       width: 100%;
       padding: 12px 15px;
       margin-bottom: 25px;
       font-weight: 700;
+      @include xs-block {
+        display: block;
+      }
       &.active {
         background-color: $red;
         color: #fff;
