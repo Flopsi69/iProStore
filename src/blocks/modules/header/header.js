@@ -82,8 +82,9 @@ $('.cat__sidebar-toggler').on('click', function (e) {
 });
 
 $('.pdp__about-tab').on('click', function () {
+  let tabTarget = parseInt($(this).data('tab-target'));
   $(this).addClass('active').siblings('.active').removeClass('active');
-  $(`.pdp__about-tab-inner[data-tab='${$(this).data('tab-target')}']`)
+  $(`.pdp__about-tab-inner[data-tab='${tabTarget}']`)
     .slideDown()
     .siblings()
     .slideUp();
