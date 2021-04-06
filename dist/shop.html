@@ -78,6 +78,10 @@
     </div>
   </div>
   <div class="header__sub">
+    <div class="header__sub-mob">
+
+    </div>
+
     <div class="container">
       <div class="header__sub-row row-flex align-center justify-between flex-nowrap">
         <a href='/services.html' class="header__sub-service flex align-center col">
@@ -601,7 +605,48 @@
   <div class="copyright text-center">Все права защищены</div>
 </footer>
 
+<div class="modal">
+  <!-- One click modal -->
+  <div class="modal__body one-click text-center">
+    <!-- Close modal -->
+    <button class="modal__head-close modal__close">
+      <svg class="modal__close-icon" fill='white' xmlns="http://www.w3.org/2000/svg" width="357" height="357" viewBox="0 0 357 357">
+        <path d="M357 35.7L321.3 0 178.5 142.8 35.7 0 0 35.7l142.8 142.8L0 321.3 35.7 357l142.8-142.8L321.3 357l35.7-35.7-142.8-142.8z" />
+      </svg>
+    </button>
 
+    <div class="one-click__title">Оформить заказ</div>
+
+    <div class="one-click__name">iPhone XR</div>
+
+    <div class="one-click__options">
+      <div class="basket-product__option_color flex aling-center justify-center one-click__option">
+        <span style="background-color: #000;"></span> Чёрный
+      </div>
+      <div class="basket-product__option one-click__option">64 GB</div>
+    </div>
+
+    <a href='#' class='one-click__image' href="">
+      <img src="img/iphone.png" alt="">
+    </a>
+
+    <div class="one-click__price">14 999 грн.</div>
+
+    <form class='one-click__form' action="">
+      <div class="input__group one-click__form-group">
+        <input name='clickName' id='clickName' class='input input-trans w-100 text-center' type="text">
+        <label class='input__label' for="clickName">Ваше имя</label>
+      </div>
+
+      <div class="input__group one-click__form-group">
+        <input name='clickPhone' id='clickPhone' class='input input-trans w-100 text-center' type="text">
+        <label class='input__label' for="clickPhone">Номер телефона</label>
+      </div>
+
+      <button class="btn btn_purple one-click__btn">Подтвердить заказ</button>
+    </form>
+  </div>
+</div>
 
 <!-- SVG sprite -->
 <div hidden>

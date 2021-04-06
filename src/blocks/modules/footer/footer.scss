@@ -89,3 +89,105 @@
   font-size: 14px;
   color: #7f7f7f;
 }
+
+/**** Modals ****/
+
+.modal {
+	position: fixed;
+	display: flex;
+	padding: 15px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	outline: 0;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgba(black, 0.5);
+	transition: $trans;
+	pointer-events: none;
+	opacity: 0;
+	&_active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&__body {
+		position: relative;
+		margin: auto;
+		display: none;
+		max-width: 300px;
+		width: 100%;
+		box-shadow: 0 5px 15px rgba(0,0,0,.5);
+		border-radius: 35px;
+    background-color: #ffffff;  
+    padding: 30px 20px;
+	}
+	&__close {
+		position: absolute;
+		right: 0;
+		border: 0;
+		top: 0;
+		outline: none;
+		line-height: 0;
+		cursor: pointer;
+		background: $red;
+		padding: rem(8);
+		transition: $trans;
+		&:hover {
+			background: darken($red, 10);
+		}
+		&-icon {
+			width: rem(15);
+			height: rem(15);
+		}
+	}
+}
+
+.one-click {
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  &__name {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-bottom: 12px;
+  }
+  &__price {
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  &__image {
+    display: block;
+    text-align: center;
+    img {
+      max-height: 275px;
+    }
+  }
+  &__option {
+    margin-bottom: 12px;
+  }
+  &__form {
+    margin-top: 22px;
+    &-group {
+      .input__label {
+        left: 0;
+        right: 0;
+      }
+      & + & {
+        margin-top: 25px;
+      }
+    }
+  }
+  &__btn {
+    padding: 14px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 50px;
+  }
+}

@@ -2387,8 +2387,14 @@ input {
 }
 
 .header__sub {
+  position: relative;
   background-color: #0b0b0b;
   padding: 10px 0;
+}
+
+.header__sub-mob {
+  display: none;
+  box-shadow: 0 10px 20px rgba(236, 40, 91, 0.5);
 }
 
 .header__sub-service {
@@ -2554,7 +2560,8 @@ input {
 
 .nav__link {
   color: #9a9a9a;
-  padding: 5px 10px;
+  padding: 8px 10px;
+  font-size: 18px;
 }
 
 .nav__link:hover {
@@ -2705,6 +2712,118 @@ input {
   background-color: #0b0b0b;
   font-size: 14px;
   color: #7f7f7f;
+}
+
+/**** Modals ****/
+
+.modal {
+  position: fixed;
+  display: flex;
+  padding: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  outline: 0;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal_active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__body {
+  position: relative;
+  margin: auto;
+  display: none;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  border: 0;
+  top: 0;
+  outline: none;
+  line-height: 0;
+  cursor: pointer;
+  background: #ec285b;
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+
+.modal__close:hover {
+  background: #cf1243;
+}
+
+.modal__close-icon {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+.one-click__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.one-click__name {
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+.one-click__price {
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.one-click__image {
+  display: block;
+  text-align: center;
+}
+
+.one-click__image img {
+  max-height: 275px;
+}
+
+.one-click__option {
+  margin-bottom: 12px;
+}
+
+.one-click__form {
+  margin-top: 22px;
+}
+
+.one-click__form-group .input__label {
+  left: 0;
+  right: 0;
+}
+
+.one-click__form-group + .one-click__form-group {
+  margin-top: 25px;
+}
+
+.one-click__btn {
+  padding: 14px;
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 75rem) {
@@ -2955,7 +3074,13 @@ input {
   }
 
   .header__main-about {
-    display: none;
+    background-color: #ec285b;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    padding: 12px 15px;
+    display: block;
   }
 
   .header__toggler {
@@ -2963,11 +3088,26 @@ input {
   }
 
   .header__contacts {
-    display: none;
+    margin: 20px 15px;
+  }
+
+  .header__contacts-item {
+    display: flex;
+    justify-content: center;
   }
 
   .header__logo img {
     height: 40px;
+  }
+
+  .header__sub-mob {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    z-index: 10;
+    color: black;
   }
 
   .header__sub-service {
@@ -2979,7 +3119,18 @@ input {
   }
 
   .header__sub-nav {
-    display: none;
+    padding-top: 20px;
+  }
+
+  .nav__link {
+    padding: 10px;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .nav__link + .nav__link {
+    margin-left: 0;
   }
 
   .burger {

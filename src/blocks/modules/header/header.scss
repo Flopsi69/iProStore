@@ -18,10 +18,19 @@
       padding: 12px 0;
     }
     &-about {
-      // Todo
       @include md-block {
-        display: none;
+        background-color: $red;
+        color: #fff;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        padding: 12px 15px;
+        display: block;
       }
+      // Todo
+      // @include md-block {
+      //   display: none;
+      // }
     }
     &-link {
       font-size: 18px;
@@ -77,9 +86,8 @@
     }
   }
   &__contacts {
-    // TODO
     @include md-block {
-      display: none;
+      margin: 20px 15px;
     }
     &-phones {
       .icon {
@@ -91,6 +99,10 @@
     }
     &-item {
     position: relative;
+    @include md-block {
+      display: flex;
+      justify-content: center;
+    }
       & + & {
         margin-top: 8px;
       }
@@ -147,8 +159,22 @@
     }
   }
   &__sub {
+    position: relative;
     background-color: #0b0b0b;
     padding: 10px 0;
+    &-mob {
+      display: none;
+      box-shadow: 0 10px 20px rgba($red, 0.5);
+      @include md-block {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #fff;
+        z-index: 10;
+        color: black;
+      }
+    }
     &-service {
       width: 180px;
       color: #9a9a9a;
@@ -185,9 +211,8 @@
       }
     }
     &-nav {
-      // TODO
       @include md-block {
-        display: none;
+       padding-top: 20px;
       }
       flex-grow: 1;
     }
@@ -239,7 +264,6 @@
       &:focus {
         border: none;
       }
-      // todo
       @include sm-block {
         position: absolute;
         background-color: #dedede;
@@ -332,7 +356,14 @@
 .nav {
   &__link {
     color: #9a9a9a;
-    padding: 5px 10px;
+    padding: 8px 10px;
+    font-size: 18px;
+    @include md-block {
+      padding: 10px;
+      display: inline-block;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
     &:hover {
       color: #fff;
     }
@@ -340,6 +371,9 @@
       margin-left: 55px;
       @include lg-block {
         margin-left: 20px;
+      }
+      @include md-block {
+        margin-left: 0;
       }
     }
   }
